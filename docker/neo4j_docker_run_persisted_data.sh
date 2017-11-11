@@ -1,3 +1,5 @@
+# to get the latest neo4j image, run 'docker pull neo4j'
+
 docker run \
   -p 7474:7474 \
   -p 7687:7687 \
