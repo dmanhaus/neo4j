@@ -503,3 +503,21 @@ CREATE
   (JessicaThompson)-[:REVIEWED {summary:'A solid romp', rating:68}]->(TheDaVinciCode),
   (JamesThompson)-[:REVIEWED {summary:'Fun, but a little far fetched', rating:65}]->(TheDaVinciCode),
   (JessicaThompson)-[:REVIEWED {summary:'You had me at Jerry', rating:92}]->(JerryMaguire)
+
+CREATE
+  (OliverStone:Person {name:'Oliver Stone'}),
+  (MichaelDouglas:Person {name:'Michael Douglas'}),
+  (CharlieSheen:Person {name:'Charlie Sheen'}),
+  (MartinSheen:Person {name:'Martin Sheen'})
+
+CREATE (WallStreet:Movie {title:'Wall Street'})
+CREATE (TheAmericanPresident:Movie {title:'The American President'})
+
+CREATE
+  (OliverStone)-[:DIRECTED]->(WallStreet),
+  (MartinSheen)-[:ACTED_IN {roles:['Carl Fox']}]->(WallStreet),
+  (CharlieSheen)-[:ACTED_IN {roles:['Bud Fox']}]->(WallStreet),
+  (MichaelDouglas)-[:ACTED_IN {roles:['Gordon Gekko']}]->(WallStreet),
+  (RobReiner)-[:DIRECTED]->(TheAmericanPresident),
+  (MartinSheen)-[:ACTED_IN {roles:['A.J. MacInerney']}]->(TheAmericanPresident),
+  (MichaelDouglas)-[:ACTED_IN {roles:['President Andrew Shepherd']}]->(TheAmericanPresident)
