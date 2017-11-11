@@ -1,4 +1,5 @@
 # to get the latest neo4j image, run 'docker pull neo4j'
+# script copied from http://kvangundy.com/wp/set-up-neo4j-and-docker/
 
 docker run \
   -p 7474:7474 \
