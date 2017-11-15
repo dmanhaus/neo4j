@@ -1,0 +1,1 @@
+docker exec -i -t `docker ps -f ancestor=neo4j -q` /var/lib/neo4j/bin/cypher-shell -u neo4j -p master
